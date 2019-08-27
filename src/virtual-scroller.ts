@@ -371,10 +371,10 @@ export class VirtualScrollerComponent implements OnInit, OnChanges, OnDestroy {
 	@Output()
 	public vsEnd: EventEmitter<IPageInfo> = new EventEmitter<IPageInfo>();
 
-	@ViewChild('content', { read: ElementRef, static: false })
+	@ViewChild('content', { read: ElementRef, static: true })
 	protected contentElementRef: ElementRef;
 
-	@ViewChild('invisiblePadding', { read: ElementRef, static: false })
+	@ViewChild('invisiblePadding', { read: ElementRef, static: true })
 	protected invisiblePaddingElementRef: ElementRef;
 
 	@ContentChild('header', { read: ElementRef, static: false })
